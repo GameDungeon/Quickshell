@@ -1,29 +1,7 @@
 <h1 align=center>caelestia-shell</h1>
 
-<div align=center>
-
-![GitHub last commit](https://img.shields.io/github/last-commit/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=9ccbfb)
-![GitHub Repo stars](https://img.shields.io/github/stars/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=b9c8da)
-![GitHub repo size](https://img.shields.io/github/repo-size/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=d3bfe6)
-![Ko-Fi donate](https://img.shields.io/badge/donate-kofi?style=for-the-badge&logo=ko-fi&logoColor=ffffff&label=ko-fi&labelColor=101418&color=f16061&link=https%3A%2F%2Fko-fi.com%2Fsoramane)
-
-</div>
-
-> [!WARNING]
-> The overhaul is finished!
-> Installation is now via an [install script](https://github.com/caelestia-dots/caelestia/blob/main/install.fish) in the
-> [`caelestia` repo](https://github.com/caelestia-dots/caelestia).
->
-> Anyone with an existing installation, please reinstall via the install script.
-> 
-> Some breaking changes:
-> - Rename the `scripts` repo -> `cli`
-> - Rename the `hypr` repo -> `caelestia`
-> - Merge all other repos (except this and `cli`) into `caelestia`
-> - Installation for the `shell` and `cli` will be done via AUR packages; `caelestia` will have a meta package and an install script (should fix most installation issues)
-> - Overhaul the scheme system (should fix a few bugs with that and make it cleaner in general)
-
-https://github.com/user-attachments/assets/0840f496-575c-4ca6-83a8-87bb01a85c5f
+## Fork
+This is my fork of the wonderful caelestia quickshell config. This is edited to my taste, and also to properly support nix.
 
 ## Components
 
