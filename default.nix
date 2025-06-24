@@ -11,8 +11,7 @@ in
   home.packages = with pkgs; [
     quickshell
     lm_sensors
-    libsForQt5.qt5.qtsvg
-    kdePackages.qtsvg
+    ddcutil
   ];
 
   home.sessionVariables = {
@@ -23,4 +22,14 @@ in
       "${pkgs.kdePackages.kirigami.unwrapped}/lib/qt-6/qml"
     ];
   };
+
+  xdg.stateFile."caelestia/scheme.json".source = ./config_files/mocha.json;
+  xdg.stateFile."caelestia/wallpaper/path.txt".text = builtins.path {
+    path = ../../../images/nix-wallpaper.png;
+    name = "nix-wallpaper";
+  };
+  #  builtins.path {
+  #   path = ../../../images/nix-wallpaper-binary-black.png;
+  #   name = "binary-wallpaper";
+  # };
 }
