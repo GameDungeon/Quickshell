@@ -1,12 +1,14 @@
 {
-  pkgs,
+  self,
   lib,
-  config,
   inputs,
+  pkgs,
+  config,
   ...
 }:
 let
-  quickshell = inputs.quickshell.packages.${pkgs.system}.default;
+  inherit (pkgs.stdenv.hostPlatform) system;
+  quickshell = inputs.quickshell.packages.${system}.default;
 in
 {
   options = {
@@ -20,6 +22,8 @@ in
       lm_sensors
       ddcutil
     ];
+
+    xdg.stateFile."caelestia/scheme.json".source = ./config_files/mocha.json;
 
     home.sessionVariables = {
       QS_CONFIG_PATH = "/etc/nixos/modules/home/quickshell";

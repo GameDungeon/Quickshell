@@ -14,11 +14,20 @@
     inputs@{
       self,
       nixpkgs,
-      systems,
       ...
     }:
+    let
+      inherit (nixpkgs) lib;
+    in
     {
       # nixosModules.default = import ./nix/module.nix inputs;
-      homeManagerModules.default = import ./nix/hm-module.nix;
+      homeManagerModules.default = import ./nix/hm-module.nix {
+        inherit
+          self
+          lib
+          inputs
+          nixpkgs
+          ;
+      };
     };
 }
