@@ -18,6 +18,7 @@
     }:
     let
       inherit (nixpkgs) lib;
+      inherit (nixpkgs) config;
     in
     {
       # nixosModules.default = import ./nix/module.nix inputs;
@@ -27,6 +28,7 @@
           lib
           inputs
           nixpkgs
+          config
           ;
       };
     };
